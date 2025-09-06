@@ -84,6 +84,6 @@ More than just a file type, a **community initiative** to standardize how we sha
 
 <div align="center">
 
-![Footer Image](./docs/Asset%2021.png)
+![Footer Image](./docs/Asset%2030.png)
 
 </div>

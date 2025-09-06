@@ -1,9 +1,13 @@
 
 ![Node Extension Preview](./docs/Asset%2018.png)
 
+<div align="center">
+
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nicolaiprodromov/dot_node/releases)
 [![Blender](https://img.shields.io/badge/Blender-4.1%2B-orange.svg)](https://www.blender.org)
 [![Community](https://img.shields.io/badge/join-community-ff69b4.svg)](https://xwz.app)
+
+</div>
 
 Introducing the `.node` format. Package, share, and distribute Geometry Node groups across the Blender community.
 
@@ -68,4 +72,8 @@ More than just a file type, a **community initiative** to standardize how we sha
 
 [![Star this repo](https://img.shields.io/github/stars/nicolaiprodromov/dot_node?style=social)](https://github.com/nicolaiprodromov/dot_node)
 
+<div align="center">
+
 ![Footer Image](./docs/Asset%2021.png)
+
+</div>

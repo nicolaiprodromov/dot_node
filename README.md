@@ -1,5 +1,5 @@
 
-![](docs/Asset%2018.png)
+![Node Extension Preview](./docs/Asset%2018.png)
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nicolaiprodromov/dot_node/releases)
 [![Blender](https://img.shields.io/badge/Blender-4.1%2B-orange.svg)](https://www.blender.org)
@@ -15,7 +15,7 @@ Introducing the `.node` format. Package, share, and distribute Geometry Node gro
 - **Community Standard**: Establish a unified format for the entire nodes ecosystem
 - **Lightning Fast**: No more hunting through blend files, just instant access to node groups
 
-![](docs/Asset%2022.png)
+![Node File Examples](./docs/Asset%2022.png)
 
 
 ## 🌟 The `.node` format
@@ -24,9 +24,9 @@ The `.node` format is designed to become the **standard** for sharing Blender no
 
 More than just a file type, a **community initiative** to standardize how we share and collaborate in Blender.
 
-![](docs/Asset%2019.png)
+![Node Format Features](./docs/Asset%2019.png)
 
-![](docs/Asset%2020.png)
+![Node Workflow](./docs/Asset%2020.png)
 
 ### Features
 
@@ -66,4 +66,4 @@ More than just a file type, a **community initiative** to standardize how we sha
 
 [![Star this repo](https://img.shields.io/github/stars/nicolaiprodromov/dot_node?style=social)](https://github.com/nicolaiprodromov/dot_node)
 
-![](docs/Asset%2021.png)
+![Footer Image](./docs/Asset%2021.png)

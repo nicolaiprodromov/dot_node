@@ -7,13 +7,15 @@
 
 Introducing the `.node` format. Package, share, and distribute Geometry Node groups across the Blender community.
 
-> `.node` is the next step in Blender workflow efficiency. Instead of complex append operations or manual node group transfers, the community can now share node groups as simple, portable `.node` files.
+`.node` is the next step in Blender workflow efficiency. Instead of complex append operations or manual node group transfers, the community can now share node groups as simple, portable `.node` files.
 
 - **One-Click Import**: Drag and drop `.node` files directly into Blender
 - **Complete Packaging**: All node data, connections, and metadata in one file
 - **Version Control Ready**: Perfect for Git workflows and collaborative projects
 - **Community Standard**: Establish a unified format for the entire nodes ecosystem
 - **Lightning Fast**: No more hunting through blend files, just instant access to node groups
+
+###
 
 ![Node File Examples](./docs/Asset%2022.png)
 
@@ -24,9 +26,9 @@ The `.node` format is designed to become the **standard** for sharing Blender no
 
 More than just a file type, a **community initiative** to standardize how we share and collaborate in Blender.
 
-![Node Format Features](./docs/Asset%2019.png)
+![Node Format Features](./docs/Asset%2023.png)
 
-![Node Workflow](./docs/Asset%2020.png)
+![Node Workflow](./docs/Asset%2025.png)
 
 ### Features
 

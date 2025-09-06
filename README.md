@@ -1,5 +1,5 @@
 
-![Node Extension Preview](./docs/Asset%2018.png)
+![Node Extension Preview](./docs/Asset%2026.png)
 
 <div align="center">
 

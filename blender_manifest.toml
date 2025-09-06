@@ -1,0 +1,27 @@
+schema_version = "1.0.0"
+id = "node_file_link"
+name = "Node File Link"
+tagline = "The base functionality for the .node extension"
+version = "1.0.0"
+type = "add-on"
+maintainer = "XWZ"
+website = "https://xwz.app"
+license = ["MIT"]
+blender_version_min = "4.1.0"
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+
+  "/*.zip",
+
+  "/docs/",
+  "/dist/",
+  "/build.bat",
+
+  "/.vscode/",
+  "/.gitignore",
+  "/*.backup",
+  "/*.md",
+]

@@ -17,8 +17,6 @@
 
 Instead of spending time appending node groups you can now use `.node` as a simple and portable file that you can *import* or *export* at will with one simple action.
 
-> *Check [Releases](https://github.com/nicolaiprodromov/dot_node/releases) for the latest version.*
-
 </div>
 
 ###
@@ -57,6 +55,8 @@ Instead of spending time appending node groups you can now use `.node` as a simp
 - **Version Control Ready**: Perfect for Git workflows and collaborative projects
 - **Community Standard**: Establish a unified format for the entire nodes ecosystem
 - **Lightning Fast**: No more hunting through blend files, just instant access to node groups
+
+> *Check [Releases](https://github.com/nicolaiprodromov/dot_node/releases) for the latest version.*
 
 ## How to
 

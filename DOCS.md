@@ -46,30 +46,30 @@ The JSON metadata follows a structured schema that captures complete node tree i
 ```json
 {
   "nodegroup_info": {
-    "name": "string",              // Original node group name
-    "package_name": "string",      // Sanitized package identifier
-    "description": "string",       // Node group description
-    "type": "GeometryNodeTree",    // Blender node tree type
-    "version": "1.0.0",           // Package format version
-    "blender_version": "string",   // Source Blender version
-    "export_timestamp": "ISO8601"  // Creation timestamp
+    "name": "string",
+    "package_name": "string",
+    "description": "string",
+    "type": "GeometryNodeTree",
+    "version": "1.0.0",
+    "blender_version": "string",
+    "export_timestamp": "ISO8601"
   },
   "interface": {
-    "inputs": [...],              // Input socket definitions
-    "outputs": [...]              // Output socket definitions
+    "inputs": [...],
+    "outputs": [...]
   },
-  "nodes": [...],                 // Individual node data
-  "links": [...],                 // Node connections
-  "layout": {                     // Visual layout information
-    "frames": [...],              // Frame node data
-    "reroutes": [...]             // Reroute node positions
+  "nodes": [...],
+  "links": [...],
+  "layout": {
+    "frames": [...],
+    "reroutes": [...]
   },
-  "dependencies": {               // External dependencies
-    "node_groups": [...],         // Required node groups
-    "materials": [...],           // Material dependencies
-    "objects": [...],             // Object references
-    "images": [...],              // Image textures
-    "texts": [...]                // Text datablocks
+  "dependencies": {
+    "node_groups": [...],
+    "materials": [...],
+    "objects": [...],
+    "images": [...],
+    "texts": [...]
   }
 }
 ```
@@ -81,15 +81,15 @@ Socket data includes comprehensive type information and default values:
 ```json
 {
   "name": "string",
-  "identifier": "string",         // Unique socket identifier
-  "socket_type": "string",        // Blender socket type (bl_idname)
-  "in_out": "INPUT|OUTPUT",       // Socket direction
-  "description": "string",        // User description
-  "default_value": "variant",     // Serialized default value
-  "min_value": "number",          // Optional range constraints
+  "identifier": "string",
+  "socket_type": "string",
+  "in_out": "INPUT|OUTPUT",
+  "description": "string",
+  "default_value": "variant",
+  "min_value": "number",
   "max_value": "number",
-  "subtype": "string",            // Socket subtype information
-  "attribute_domain": "string"    // Geometry domain (4.5+)
+  "subtype": "string",
+  "attribute_domain": "string"
 }
 ```
 
@@ -125,16 +125,14 @@ The serialization engine handles the complex task of converting Blender's intern
 The serializer handles interface differences between Blender versions:
 
 ```python
-# Blender 4.5+ Interface API
 if hasattr(self.node_group, 'interface') and hasattr(self.node_group.interface, 'items_tree'):
     for item in self.node_group.interface.items_tree:
         if hasattr(item, 'item_type') and item.item_type == 'SOCKET':
-            # Process new interface structure
+            pass
             
-# Fallback for Blender 4.1-4.4
 elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
     for input_socket in self.node_group.inputs:
-        # Process legacy interface structure
+        pass
 ```
 
 ### Advanced Property Handling
@@ -158,16 +156,15 @@ def _serialize_socket_default_value(self, socket):
     try:
         value = socket.default_value
         
-        # Handle Blender math types
         if hasattr(value, '__iter__') and not isinstance(value, str):
-            return list(value)  # Vector, Color, Euler
+            return list(value)
         elif hasattr(value, 'copy'):
-            return value.copy()  # Ensure immutable copy
+            return value.copy()
         else:
             return value
             
     except Exception:
-        return None  # Fallback for unsupported types
+        return None
 ```
 
 ## 📥 Import & Unpacking System
@@ -271,7 +268,7 @@ class NODE_FH_drop_handler(bpy.types.FileHandler):
     
     @classmethod
     def poll_drop(cls, context):
-        return True  # Accept drops in any context
+        return True
 ```
 
 #### Mouse Coordinate Capture
@@ -282,8 +279,6 @@ Precise cursor positioning for intelligent node placement:
 def invoke(self, context, event):
     self.mouse_x = event.mouse_region_x if hasattr(event, 'mouse_region_x') else 0
     self.mouse_y = event.mouse_region_y if hasattr(event, 'mouse_region_y') else 0
-    
-    # Pass coordinates to unpacker for placement
 ```
 
 ### Multi-File Batch Processing
@@ -324,10 +319,6 @@ Uses .NET compression APIs for cross-platform compatibility:
 ```powershell
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $zip = [System.IO.Compression.ZipFile]::Open('output.node', 'Create')
-
-# Add files with proper directory structure
-# Calculate SHA256 hash for integrity
-# Create .config file with validation data
 ```
 
 #### Hash Calculation Algorithm

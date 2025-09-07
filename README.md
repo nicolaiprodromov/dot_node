@@ -65,7 +65,7 @@ Check the releases for the latest version.
 
 The `.node` file is designed to become the **standard** for sharing Blender node groups.
 
-More than just a file type, a **community initiative** to standardize how we share and collaborate in Blender.
+> More than just a file type, a **community initiative** to standardize how we share and collaborate using procedural setups in Blender.
 
 ### Understanding `.node` files
 

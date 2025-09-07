@@ -1,0 +1,846 @@
+<!DOCTYP        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #3b4055;
+            margin: 0;
+            padding: 20px;
+            max-width: 980px;
+            margin: 0 auto;
+        }html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Extension - Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #3b4055;
+            margin: 0;
+            padding: 20px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .header-image {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        div[align="center"] {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #ffffff;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            border-bottom: 1px solid #2e3244;
+            padding-bottom: 0.3em;
+            color: #ffffff;
+        }
+        
+        h4 {
+            font-size: 1.25em;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #ffffff;
+        }
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        em {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        strong {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        li {
+            margin-bottom: 4px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        blockquote {
+            padding: 0 1em;
+            color: rgba(255, 255, 255, 0.7);
+            border-left: 0.25em solid #64b5f6;
+            margin: 0 0 16px 0;
+            background-color: #2e3244;
+            border-radius: 3px;
+        }
+        
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #3a4450;
+        }
+        
+        table td {
+            padding: 8px 16px;
+            border: 1px solid #4a5568;
+            vertical-align: top;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        table tr {
+            background-color: #2e3244;
+            border-top: 1px solid #3b4055;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        table tr:nth-child(2n) {
+            background-color: #252938;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .icon-table {
+            border: none;
+            background: none !important;
+            background-color: transparent !important;
+        }
+        
+        .icon-table td {
+            border: none;
+            padding: 10px;
+            background: none !important;
+            background-color: transparent !important;
+            vertical-align: top;
+        }
+        
+        .icon-table tr {
+            border: none;
+            background-color: transparent;
+        }
+        
+        .icon-table tr:nth-child(2n) {
+            background-color: transparent;
+        }
+        
+        .icon-table a {
+            background: none !important;
+            background-color: transparent !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            line-height: 1.4;
+            min-height: 90px;
+        }
+        
+        .icon-table img[src*="git.png"] {
+            filter: invert(1);
+        }
+        
+        .icon-table img {
+            margin-bottom: 8px;
+        }
+        
+        code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: #2e3244;
+            border-radius: 3px;
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+            border: 1px solid #3b4055;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #2e3244;
+            border-radius: 6px;
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+            border: 1px solid #3b4055;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        pre code {
+            display: inline;
+            max-width: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            line-height: inherit;
+            word-wrap: normal;
+            background-color: transparent;
+            border: 0;
+            color: #ffffff;
+        }
+        
+        .badge {
+            display: inline-block;
+            margin: 0 2px;
+            background: none !important;
+        }
+        
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #2e3244;
+            border: 0;
+            border-radius: 2px;
+        }
+        
+        .separator {
+            margin: 24px 0;
+            height: 0;
+            border: 0;
+        }
+        
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        
+        h2 .material-symbols-outlined {
+            font-size: 28px;
+        }
+        
+        .technical-flow {
+            background-color: #2e3244;
+            border: 1px solid #3b4055;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <img src="./docs/Asset%2026.png" alt="Node Extension Preview" class="header-image">
+    
+    <div align="center">
+        <a href="https://github.com/nicolaiprodromov/dot_node/releases">
+            <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version" class="badge">
+        </a>
+        <a href="https://www.blender.org">
+            <img src="https://img.shields.io/badge/Blender-4.1%2B-orange.svg" alt="Blender" class="badge">
+        </a>
+        <a href="https://xwz.app">
+            <img src="https://img.shields.io/badge/join-community-ff69b4.svg" alt="Community" class="badge">
+        </a>
+    </div>
+    
+    <div align="center">
+        <h3>Technical Documentation for <code>.node</code></h3>
+        <p><em>Deep dive into the architecture, implementation, and technical specifications of the Node File Link addon.</em></p>
+        <p>This documentation covers the internal workings of the <code>.node</code> file format, serialization engine, and Blender integration mechanisms that power seamless node group sharing and distribution.</p>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <div align="center">
+        <table class="icon-table">
+            <tr>
+                <td align="center" width="120">
+                    <a href="https://github.com/nicolaiprodromov/dot_node/releases">
+                        <img src="./docs/git.png" width="70">
+                        <br>Get for Free
+                    </a>
+                </td>
+                <td align="center" width="120">
+                    <a href="https://superhivemarket.com">
+                        <img src="./docs/superhive.png" width="70">
+                        <br>Buy on Superhive
+                    </a>
+                </td>
+                <td align="center" width="120">
+                    <a href="https://blenderkit.com">
+                        <img src="./docs/blenderkit.png" width="70">
+                        <br>Buy on BlenderKit
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <ul>
+        <li><strong>Advanced Serialization</strong>: Complete node tree serialization with metadata, properties, and interface definitions</li>
+        <li><strong>Cross-Version Compatibility</strong>: Handles Blender 4.1+ interface changes and node tree variations</li>
+        <li><strong>Windows Registry Integration</strong>: Automatic file association registration with custom icon support</li>
+        <li><strong>Real-time Import System</strong>: Drag & drop functionality with cursor-aware node placement</li>
+    </ul>
+    
+    <blockquote>
+        <p><em>Deep dive into the architecture, implementation, and technical specifications of the Node File Link addon.</em></p>
+    </blockquote>
+    
+    <h2><span class="material-symbols-outlined">folder_open</span>File Format Specification</h2>
+    
+    <h3>Internal Structure</h3>
+    
+    <p>A <code>.node</code> file is a ZIP archive containing exactly three components:</p>
+    
+    <table>
+        <tr>
+            <td><strong>Component</strong></td>
+            <td><strong>Filename</strong></td>
+            <td><strong>Purpose</strong></td>
+            <td><strong>Format</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Metadata</strong></td>
+            <td><code>{package_name}.json</code></td>
+            <td>Node structure, properties, and interface definitions</td>
+            <td>JSON with UTF-8 encoding</td>
+        </tr>
+        <tr>
+            <td><strong>Node Data</strong></td>
+            <td><code>{package_name}.blend</code></td>
+            <td>Actual Blender node group data for importing</td>
+            <td>Standard Blender file</td>
+        </tr>
+        <tr>
+            <td><strong>Package Config</strong></td>
+            <td><code>.config</code></td>
+            <td>Package validation and integrity verification</td>
+            <td>Plain text key=value pairs</td>
+        </tr>
+    </table>
+    
+    <h3>JSON Metadata Schema</h3>
+    
+    <p>The JSON metadata follows a structured schema that captures complete node tree information:</p>
+    
+    <pre><code>{
+  "nodegroup_info": {
+    "name": "string",              // Original node group name
+    "package_name": "string",      // Sanitized package identifier
+    "description": "string",       // Node group description
+    "type": "GeometryNodeTree",    // Blender node tree type
+    "version": "1.0.0",           // Package format version
+    "blender_version": "string",   // Source Blender version
+    "export_timestamp": "ISO8601"  // Creation timestamp
+  },
+  "interface": {
+    "inputs": [...],              // Input socket definitions
+    "outputs": [...]              // Output socket definitions
+  },
+  "nodes": [...],                 // Individual node data
+  "links": [...],                 // Node connections
+  "layout": {                     // Visual layout information
+    "frames": [...],              // Frame node data
+    "reroutes": [...]             // Reroute node positions
+  },
+  "dependencies": {               // External dependencies
+    "node_groups": [...],         // Required node groups
+    "materials": [...],           // Material dependencies
+    "objects": [...],             // Object references
+    "images": [...],              // Image textures
+    "texts": [...]                // Text datablocks
+  }
+}</code></pre>
+    
+    <h4>Socket Serialization</h4>
+    
+    <p>Socket data includes comprehensive type information and default values:</p>
+    
+    <pre><code>{
+  "name": "string",
+  "identifier": "string",         // Unique socket identifier
+  "socket_type": "string",        // Blender socket type (bl_idname)
+  "in_out": "INPUT|OUTPUT",       // Socket direction
+  "description": "string",        // User description
+  "default_value": "variant",     // Serialized default value
+  "min_value": "number",          // Optional range constraints
+  "max_value": "number",
+  "subtype": "string",            // Socket subtype information
+  "attribute_domain": "string"    // Geometry domain (4.5+)
+}</code></pre>
+    
+    <h3>Package Validation System</h3>
+    
+    <p>The <code>.config</code> file contains integrity verification data:</p>
+    
+    <pre><code>hash=sha256_hash_of_all_files
+created=2025-09-07T12:34:56Z
+format_version=1.0.0</code></pre>
+    
+    <p>The hash is computed from all file contents in the package, ensuring data integrity during transfer and storage.</p>
+    
+    <h2><span class="material-symbols-outlined">settings</span>Serialization Engine</h2>
+    
+    <h3>NodeGroupSerializer Class</h3>
+    
+    <p>The serialization engine handles the complex task of converting Blender's internal node tree representation into a portable format:</p>
+    
+    <h4>Core Serialization Methods</h4>
+    
+    <table>
+        <tr>
+            <td><strong>Method</strong></td>
+            <td><strong>Purpose</strong></td>
+            <td><strong>Output</strong></td>
+        </tr>
+        <tr>
+            <td><code>_serialize_interface()</code></td>
+            <td>Extract input/output socket definitions</td>
+            <td>Interface structure with socket metadata</td>
+        </tr>
+        <tr>
+            <td><code>_serialize_nodes()</code></td>
+            <td>Capture individual node properties and settings</td>
+            <td>Complete node data with properties</td>
+        </tr>
+        <tr>
+            <td><code>_serialize_links()</code></td>
+            <td>Map all node connections and relationships</td>
+            <td>Connection data with socket identifiers</td>
+        </tr>
+        <tr>
+            <td><code>_serialize_layout()</code></td>
+            <td>Preserve visual arrangement (frames, reroutes)</td>
+            <td>Layout positioning information</td>
+        </tr>
+    </table>
+    
+    <h4>Blender Version Compatibility</h4>
+    
+    <p>The serializer handles interface differences between Blender versions:</p>
+    
+    <pre><code>// Blender 4.5+ Interface API
+if hasattr(self.node_group, 'interface') and hasattr(self.node_group.interface, 'items_tree'):
+    for item in self.node_group.interface.items_tree:
+        if hasattr(item, 'item_type') and item.item_type == 'SOCKET':
+            // Process modern interface structure
+            
+// Fallback for Blender 4.1-4.4
+elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
+    for input_socket in self.node_group.inputs:
+        // Process legacy interface structure</code></pre>
+    
+    <h3>Advanced Property Handling</h3>
+    
+    <p>The serializer captures node-specific properties including:</p>
+    
+    <ul>
+        <li><strong>Mathematical Properties</strong>: <code>operation</code>, <code>blend_type</code>, <code>distribution</code>, <code>mode</code></li>
+        <li><strong>Data Properties</strong>: <code>data_type</code>, <code>domain</code>, <code>interpolation</code>, <code>resolution</code></li>
+        <li><strong>Control Properties</strong>: <code>use_clamp</code>, <code>clamp_factor</code>, <code>offset</code>, <code>scale</code></li>
+        <li><strong>Custom Properties</strong>: User-defined properties via <code>node.keys()</code></li>
+    </ul>
+    
+    <h4>Default Value Serialization</h4>
+    
+    <p>Complex data types are handled with appropriate serialization:</p>
+    
+    <pre><code>def _serialize_socket_default_value(self, socket):
+    if not hasattr(socket, 'default_value'):
+        return None
+    
+    try:
+        value = socket.default_value
+        
+        # Handle Blender math types
+        if hasattr(value, '__iter__') and not isinstance(value, str):
+            return list(value)  # Vector, Color, Euler
+        elif hasattr(value, 'copy'):
+            return value.copy()  # Ensure immutable copy
+        else:
+            return value  # Primitive types
+            
+    except Exception:
+        return None  # Fallback for unsupported types</code></pre>
+    
+    <h2><span class="material-symbols-outlined">input</span>Import & Unpacking System</h2>
+    
+    <h3>NodeGroupUnpacker Class</h3>
+    
+    <p>The unpacking system reconstructs Blender node trees from <code>.node</code> files with full fidelity:</p>
+    
+    <h4>Import Process Flow</h4>
+    
+    <div class="technical-flow">
+        <ol>
+            <li><strong>File Validation</strong> - Verify ZIP structure and required components</li>
+            <li><strong>Integrity Check</strong> - Validate package hash against contents</li>
+            <li><strong>Temporary Extraction</strong> - Extract to secure temporary directory</li>
+            <li><strong>Blend File Import</strong> - Use Blender's append system for node data</li>
+            <li><strong>Context Placement</strong> - Place nodes at cursor or default location</li>
+            <li><strong>Cleanup</strong> - Remove temporary files and update UI</li>
+        </ol>
+    </div>
+    
+    <h4>Multi-File Processing</h4>
+    
+    <p>The unpacker supports batch processing of multiple <code>.node</code> files:</p>
+    
+    <pre><code>def process_multiple_files(self, file_paths):
+    success_count = 0
+    error_count = 0
+    error_messages = []
+    
+    for file_path in file_paths:
+        success, message = self.unpack_node_file(file_path)
+        if success:
+            success_count += 1
+        else:
+            error_count += 1
+            error_messages.append(message)
+    
+    return success_count, error_count, error_messages</code></pre>
+    
+    <h3>Context-Aware Node Placement</h3>
+    
+    <p>The system intelligently places imported nodes based on context:</p>
+    
+    <table>
+        <tr>
+            <td><strong>Context</strong></td>
+            <td><strong>Placement Strategy</strong></td>
+            <td><strong>Behavior</strong></td>
+        </tr>
+        <tr>
+            <td>Single File Import</td>
+            <td>Cursor Position</td>
+            <td>Place at exact mouse coordinates</td>
+        </tr>
+        <tr>
+            <td>Multiple File Import</td>
+            <td>Default Location</td>
+            <td>Place at node editor origin</td>
+        </tr>
+        <tr>
+            <td>Background Import</td>
+            <td>Scene Integration</td>
+            <td>Add to library without placement</td>
+        </tr>
+    </table>
+    
+    <h2><span class="material-symbols-outlined">desktop_windows</span>Windows Integration</h2>
+    
+    <h3>File Association System</h3>
+    
+    <p>The <code>FileAssociationManager</code> class handles Windows registry integration for seamless file handling:</p>
+    
+    <h4>Registry Structure</h4>
+    
+    <p>The addon creates the following registry entries:</p>
+    
+    <pre><code>HKEY_CURRENT_USER\Software\Classes\.node
+    └── (Default) = "NodeFile"
+
+HKEY_CURRENT_USER\Software\Classes\NodeFile
+    ├── (Default) = "Node Archive File"
+    ├── DefaultIcon
+    │   └── (Default) = "C:\path\to\addon\icons\logo_xwz_ne.ico"
+    └── shell\open\command
+        └── (Default) = "C:\Program Files\7-Zip\7zFM.exe \"%1\""</code></pre>
+    
+    <h4>Archive Application Discovery</h4>
+    
+    <p>The system automatically detects suitable archive applications:</p>
+    
+    <ol>
+        <li><strong>7-Zip Detection</strong> - Check standard installation paths and PATH environment</li>
+        <li><strong>Registry Lookup</strong> - Query both 32-bit and 64-bit registry entries</li>
+        <li><strong>WinRAR Fallback</strong> - Detect WinRAR installations if 7-Zip unavailable</li>
+        <li><strong>System Default</strong> - Use Windows "Open With" dialog as last resort</li>
+    </ol>
+    
+    <h3>Shell Integration Features</h3>
+    
+    <ul>
+        <li><strong>Custom Icons</strong>: <code>.node</code> files display with custom XWZ icon</li>
+        <li><strong>Context Menu</strong>: Right-click integration for "Open with Archive Manager"</li>
+        <li><strong>Double-Click Handling</strong>: Direct access to file contents via archive viewer</li>
+        <li><strong>Shell Notifications</strong>: Automatic icon cache refresh and file association updates</li>
+    </ul>
+    
+    <h2><span class="material-symbols-outlined">drag_handle</span>Drag & Drop System</h2>
+    
+    <h3>Drop Handler Implementation</h3>
+    
+    <p>The drag & drop system uses Blender's <code>FileHandler</code> API for seamless integration:</p>
+    
+    <pre><code>class NODE_FH_drop_handler(bpy.types.FileHandler):
+    bl_idname = "NODE_FH_drop_handler"
+    bl_label = "Node Drop Handler"
+    bl_import_operator = "node.drop_handler"
+    bl_file_extensions = ".node"
+    
+    @classmethod
+    def poll_drop(cls, context):
+        return True  // Accept drops in any context</code></pre>
+    
+    <h4>Mouse Coordinate Capture</h4>
+    
+    <p>Precise cursor positioning for intelligent node placement:</p>
+    
+    <pre><code>def invoke(self, context, event):
+    self.mouse_x = event.mouse_region_x if hasattr(event, 'mouse_region_x') else 0
+    self.mouse_y = event.mouse_region_y if hasattr(event, 'mouse_region_y') else 0
+    
+    // Pass coordinates to unpacker for placement</code></pre>
+    
+    <h3>Multi-File Batch Processing</h3>
+    
+    <p>The handler efficiently processes multiple files dropped simultaneously:</p>
+    
+    <div class="technical-flow">
+        <h4>Processing Pipeline</h4>
+        <ol>
+            <li><strong>File Validation</strong> - Filter <code>.node</code> files from mixed drops</li>
+            <li><strong>Path Resolution</strong> - Convert relative paths to absolute paths</li>
+            <li><strong>Batch Processing</strong> - Process all valid files in sequence</li>
+            <li><strong>Error Aggregation</strong> - Collect and report processing results</li>
+            <li><strong>UI Feedback</strong> - Provide detailed success/failure notifications</li>
+        </ol>
+    </div>
+    
+    <h2><span class="material-symbols-outlined">tune</span>Configuration & Settings</h2>
+    
+    <h3>Addon Manifest Configuration</h3>
+    
+    <pre><code>schema_version = "1.0.0"
+id = "node_file_link"
+name = "Node File Link"
+tagline = "The base functionality for the .node extension"
+version = "1.0.0"
+type = "add-on"
+maintainer = "XWZ"
+website = "https://xwz.app"
+license = ["MIT"]
+blender_version_min = "4.1.0"</code></pre>
+    
+    <h3>Package Creation System</h3>
+    
+    <p>The <code>package.bat</code> script creates optimized <code>.node</code> files with integrity verification:</p>
+    
+    <h4>PowerShell Integration</h4>
+    
+    <p>Uses .NET compression APIs for cross-platform compatibility:</p>
+    
+    <pre><code>Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip = [System.IO.Compression.ZipFile]::Open('output.node', 'Create')
+
+// Add files with proper directory structure
+// Calculate SHA256 hash for integrity
+// Create .config file with validation data</code></pre>
+    
+    <h4>Hash Calculation Algorithm</h4>
+    
+    <ol>
+        <li>Calculate SHA256 hash for each file in package</li>
+        <li>Sort hashes alphabetically for consistency</li>
+        <li>Combine all hashes with pipe separator</li>
+        <li>Calculate final SHA256 hash of combined string</li>
+        <li>Store in <code>.config</code> file for validation</li>
+    </ol>
+    
+    <h2><span class="material-symbols-outlined">api</span>API Reference</h2>
+    
+    <h3>Core Classes</h3>
+    
+    <h4>NodeGroupSerializer</h4>
+    
+    <table>
+        <tr>
+            <td><strong>Method</strong></td>
+            <td><strong>Parameters</strong></td>
+            <td><strong>Returns</strong></td>
+        </tr>
+        <tr>
+            <td><code>serialize_nodegroup()</code></td>
+            <td><code>node_tree, output_directory, package_name</code></td>
+            <td><code>bool</code> (success status)</td>
+        </tr>
+        <tr>
+            <td><code>_create_metadata_json()</code></td>
+            <td>None</td>
+            <td><code>bool</code> (creation success)</td>
+        </tr>
+        <tr>
+            <td><code>_create_blend_file()</code></td>
+            <td>None</td>
+            <td><code>bool</code> (export success)</td>
+        </tr>
+    </table>
+    
+    <h4>NodeGroupUnpacker</h4>
+    
+    <table>
+        <tr>
+            <td><strong>Method</strong></td>
+            <td><strong>Parameters</strong></td>
+            <td><strong>Returns</strong></td>
+        </tr>
+        <tr>
+            <td><code>unpack_node_file()</code></td>
+            <td><code>filepath: str</code></td>
+            <td><code>Tuple[bool, str]</code> (success, message)</td>
+        </tr>
+        <tr>
+            <td><code>process_multiple_files()</code></td>
+            <td><code>file_paths: List[str]</code></td>
+            <td><code>Tuple[int, int, List[str]]</code> (success_count, error_count, errors)</td>
+        </tr>
+        <tr>
+            <td><code>set_mouse_coordinates()</code></td>
+            <td><code>x: int, y: int</code></td>
+            <td>None</td>
+        </tr>
+    </table>
+    
+    <h4>FileAssociationManager</h4>
+    
+    <table>
+        <tr>
+            <td><strong>Method</strong></td>
+            <td><strong>Parameters</strong></td>
+            <td><strong>Returns</strong></td>
+        </tr>
+        <tr>
+            <td><code>perform_file_association()</code></td>
+            <td>None</td>
+            <td><code>bool</code> (registration success)</td>
+        </tr>
+        <tr>
+            <td><code>find_archive_application()</code></td>
+            <td>None</td>
+            <td><code>str</code> (application path)</td>
+        </tr>
+        <tr>
+            <td><code>check_existing_association()</code></td>
+            <td>None</td>
+            <td><code>str | None</code> (existing ProgID)</td>
+        </tr>
+    </table>
+    
+    <h2><span class="material-symbols-outlined">code</span>Development Guidelines</h2>
+    
+    <h3>Extending the System</h3>
+    
+    <p>For developers looking to extend or modify the addon:</p>
+    
+    <ul>
+        <li><strong>Custom Serializers</strong>: Inherit from <code>NodeGroupSerializer</code> for specialized node types</li>
+        <li><strong>Additional File Formats</strong>: Implement new packers/unpackers following the established pattern</li>
+        <li><strong>Platform Support</strong>: Add file association managers for macOS and Linux</li>
+        <li><strong>UI Extensions</strong>: Integrate additional operators into Blender's interface</li>
+    </ul>
+    
+    <h2><span class="material-symbols-outlined">analytics</span>Technical Specifications</h2>
+    
+    <table>
+        <tr>
+            <td><strong>Specification</strong></td>
+            <td><strong>Value</strong></td>
+            <td><strong>Notes</strong></td>
+        </tr>
+        <tr>
+            <td>File Format Version</td>
+            <td>1.0.0</td>
+            <td>Current format specification</td>
+        </tr>
+        <tr>
+            <td>Supported Node Types</td>
+            <td>GeometryNodeTree</td>
+            <td>Primary focus on Geometry Nodes</td>
+        </tr>
+        <tr>
+            <td>Blender Compatibility</td>
+            <td>4.1.0+</td>
+            <td>Modern extension system required</td>
+        </tr>
+        <tr>
+            <td>Platform Support</td>
+            <td>Windows</td>
+            <td>macOS and Linux support planned</td>
+        </tr>
+        <tr>
+            <td>Maximum File Size</td>
+            <td>Unlimited</td>
+            <td>Limited by available system memory</td>
+        </tr>
+        <tr>
+            <td>Compression</td>
+            <td>ZIP (deflate)</td>
+            <td>Standard compression for portability</td>
+        </tr>
+        <tr>
+            <td>Hash Algorithm</td>
+            <td>SHA256</td>
+            <td>Cryptographic integrity verification</td>
+        </tr>
+        <tr>
+            <td>Character Encoding</td>
+            <td>UTF-8</td>
+            <td>Universal text encoding support</td>
+        </tr>
+    </table>
+    
+    <h2><span class="material-symbols-outlined">history</span>Changelog</h2>
+    
+    <ul>
+        <li><strong>Version 1.0.0 (September 2025)</strong>: Initial release with core functionality</li>
+    </ul>
+</body>
+</html>

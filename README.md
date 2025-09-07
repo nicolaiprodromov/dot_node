@@ -15,7 +15,7 @@
 
 *Package, share, and distribute Geometry Node groups across the Blender community.*
 
-Instead of spending time appending node groups you can now use `.node` as a simple and portable file that you can *import* or *export* at will with one simple action.
+The current import system for nodes is broken, the append method is just another input in my output iykwim. Instead of spending time appending node groups you can now use `.node` as a simple and portable file that you can *import* or *export* at will by *dragging* the file into Blender or clicking the *export button*.
 
 </div>
 
@@ -50,15 +50,14 @@ Instead of spending time appending node groups you can now use `.node` as a simp
 
 ###
 
-- **One-Click Import**: Drag and drop `.node` files directly into Blender
+- **Lightning Fast**: Drag and drop `.node` files directly into Blender. No more hunting through blend files, just instant access to node groups
 - **Complete Packaging**: All node data, connections, and metadata in one file
 - **Version Control Ready**: Perfect for Git workflows and collaborative projects
 - **Community Standard**: Establish a unified format for the entire nodes ecosystem
-- **Lightning Fast**: No more hunting through blend files, just instant access to node groups
 
 > *Check [Releases](https://github.com/nicolaiprodromov/dot_node/releases) for the latest version.*
 
-## How to
+## The Blender extension
 
 ### Install
 
@@ -90,9 +89,11 @@ Instead of spending time appending node groups you can now use `.node` as a simp
 
 ## 🌟 The file
 
-It's designed to become the **standard** for sharing Blender procedural node group setups and make Geometry Nodes accessible to the web.
+It's designed to become the **standard** for sharing and working collaboratively on Blender procedural node group setups and make Geometry Nodes accessible to the web.
 
 > More than just a file type, a **community initiative** to standardize how we share and collaborate using procedural setups in Blender.
+
+### Under the hood
 
 A `.node` file is a lightweight, portable package for sharing procedural node group setups with all the data, connections, and metadata. Technically, it's a ZIP archive containing three essential components:
 
@@ -101,6 +102,8 @@ A `.node` file is a lightweight, portable package for sharing procedural node gr
 - a `.config` file for package validation.
 
 This format enables seamless sharing and importing across different Blender projects (soon enough, different software too) without complex file dependencies or incompatibility issues.
+
+> *Read the full Documentation.*
 
 ### Features
 
@@ -112,7 +115,7 @@ This format enables seamless sharing and importing across different Blender proj
 | **Metadata** | Preserve all node properties, connections, and interface definitions |
 | **Cross-Platform** | WIP -> Works only on Windows atm|
 
-### Roadmap
+## Roadmap
 
 URGENT:
 
@@ -150,8 +153,3 @@ LONG-TERM:
 </div>
 
 [![Star this repo](https://img.shields.io/github/stars/nicolaiprodromov/dot_node?style=social)](https://github.com/nicolaiprodromov/dot_node)
-
-## Changelog
-
-- 10 SEPTEMBER 2025: Version 1.0.0 release
-

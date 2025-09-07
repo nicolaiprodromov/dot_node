@@ -23,9 +23,13 @@ Instead of spending time appending node groups you can now use `.node` as a simp
 
 ###
 
-<div align="center">
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
 
-<div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://github.com/nicolaiprodromov/dot_node/releases" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/git.png" alt="Get for Free on GitHub" width="70" style="display: block; margin: 0 auto 5px auto; filter: invert(1);"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Get for Free</div></a></div><div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://superhivemarket.com" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/superhive.png" alt="Buy on Superhive" width="70" style="display: block; margin: 0 auto 5px auto;"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Buy on Superhive</div></a></div><div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://blenderkit.com" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/blenderkit.png" alt="Buy on BlenderKit" width="70" style="display: block; margin: 0 auto 5px auto;"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Buy on BlenderKit</div></a></div>
+<div style="text-align: center; width: 110px;"><a href="https://github.com/nicolaiprodromov/dot_node/releases" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/git.png" alt="Get for Free on GitHub" width="70" style="display: block; margin: 0 auto 8px auto; filter: invert(1);"><div>Get for Free</div></a></div>
+
+<div style="text-align: center; width: 110px;"><a href="https://superhivemarket.com" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/superhive.png" alt="Buy on Superhive" width="70" style="display: block; margin: 0 auto 8px auto;"><div>Buy on Superhive</div></a></div>
+
+<div style="text-align: center; width: 110px;"><a href="https://blenderkit.com" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/blenderkit.png" alt="Buy on BlenderKit" width="70" style="display: block; margin: 0 auto 8px auto;"><div>Buy on BlenderKit</div></a></div>
 
 </div>
 

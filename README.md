@@ -63,11 +63,9 @@ Check the releases for the latest version.
 
 ## 🌟 The file
 
-The `.node` file is designed to become the **standard** for sharing Blender node groups.
+It's designed to become the **standard** for sharing Blender procedural node group setups and make Geometry Nodes accessible to the web.
 
 > More than just a file type, a **community initiative** to standardize how we share and collaborate using procedural setups in Blender.
-
-### Understanding `.node` files
 
 A `.node` file is a lightweight, portable package for sharing procedural node group setups with all the data, connections, and metadata. Technically, it's a ZIP archive containing three essential components:
 
@@ -75,7 +73,7 @@ A `.node` file is a lightweight, portable package for sharing procedural node gr
 - a `.blend` file with the actual node group data
 - a `.config` file for package validation.
 
-This format enables seamless sharing and importing across different Blender projects without complex file dependencies.
+This format enables seamless sharing and importing across different Blender projects (soon enough, different software too) without complex file dependencies or incompatibility issues.
 
 ### Features
 

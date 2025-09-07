@@ -17,13 +17,17 @@
 
 Instead of spending time appending node groups you can now use `.node` as a simple and portable file that you can *import* or *export* at will with one simple action.
 
-Check the releases for the latest version.
+> *Check [Releases](https://github.com/nicolaiprodromov/dot_node/releases) for the latest version.*
 
 </div>
 
 ###
 
-![Node File Examples](./docs/Asset%2022.png)
+<div align="center">
+
+<div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://github.com/nicolaiprodromov/dot_node/releases" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/git.png" alt="Get for Free on GitHub" width="70" style="display: block; margin: 0 auto 5px auto; filter: invert(1);"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Get for Free</div></a></div><div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://superhivemarket.com" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/superhive.png" alt="Buy on Superhive" width="70" style="display: block; margin: 0 auto 5px auto;"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Buy on Superhive</div></a></div><div style="display: inline-block; margin: 0 8px; vertical-align: top; text-align: center; width: 130px; height: 135px; position: relative;"><a href="https://blenderkit.com" style="text-decoration: none; display: block; height: 100%;"><img src="./docs/blenderkit.png" alt="Buy on BlenderKit" width="70" style="display: block; margin: 0 auto 5px auto;"><div style="position: absolute; bottom: 0; width: 130px; left: 50%; transform: translateX(-50%); color: #ff6600;">Buy on BlenderKit</div></a></div>
+
+</div>
 
 ###
 
@@ -33,7 +37,9 @@ Check the releases for the latest version.
 - **Community Standard**: Establish a unified format for the entire nodes ecosystem
 - **Lightning Fast**: No more hunting through blend files, just instant access to node groups
 
-## Install
+## How to
+
+### Install
 
 1. **Download** the latest release from [Releases](https://github.com/nicolaiprodromov/dot_node/releases)
 2. **Install** via Blender → Edit → Preferences → Add-ons → Install
@@ -48,7 +54,7 @@ Check the releases for the latest version.
 
 </div>
 
-## Import & Export
+### Import & Export
 
 - **IMPORT**:
     1. Drag & Drop the nodes you want to import
@@ -85,25 +91,46 @@ This format enables seamless sharing and importing across different Blender proj
 | **Metadata** | Preserve all node properties, connections, and interface definitions |
 | **Cross-Platform** | WIP -> Works only on Windows atm|
 
-## How to help
+### Roadmap
+
+URGENT:
+
+1. *Improve the addon and release version 1.1.0 by 2026*
+2. **Get the extension registration working on all platforms**
+
+LONG-TERM:
+
+1. Create compatibility with **[ThreeJS](https://threejs.org) & [Houdini](https://sidefx.com)**
+2. *Manage to get the .node file link addon bundled with Blender*
+3. Some sort of backward compatibility for older versions of Blender
+
+## How to be a part of this movement
 
 - **Adopt** the `.node` format in your projects
 - **Share** `.node` files along with your .blend files (they're very small)
-- **Contribute** to the project development by becoming a *contributor*/sharing your opinion
-- **Buy** the addon on superhive or blenderkit
+- **Build** apps and addons that use `.node`
+- **Be a part of the project development** by becoming a *contributor*/ by sharing your opinion
+- **Buy** the addon on [Superhive](https://superhivemarket.com) or [Blenderkit](https://blenderkit.com)
 
 ## Contributors
 
 - Found an issue? [Create an issue](https://github.com/nicolaiprodromov/dot_node/issues/new)
 - Have an idea? [Start a discussion](https://github.com/nicolaiprodromov/dot_node/discussions)
+- Want compatibility with another software? [Start a discussion](https://github.com/nicolaiprodromov/dot_node/discussions)
+- Help test on different platforms/setups
 - Help improve the docs and examples
 
 ###
-
-[![Star this repo](https://img.shields.io/github/stars/nicolaiprodromov/dot_node?style=social)](https://github.com/nicolaiprodromov/dot_node)
 
 <div align="center">
 
 ![Footer Image](./docs/Asset%2030.png)
 
 </div>
+
+[![Star this repo](https://img.shields.io/github/stars/nicolaiprodromov/dot_node?style=social)](https://github.com/nicolaiprodromov/dot_node)
+
+## Changelog
+
+- 10 SEPTEMBER 2025: Version 1.0.0 release
+

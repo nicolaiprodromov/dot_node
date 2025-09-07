@@ -24,15 +24,30 @@ Instead of spending time appending node groups you can now use `.node` as a simp
 ###
 
 <div align="center">
-<div style="display: flex; justify-content: center; align-items: flex-start; gap: 15px; flex-wrap: wrap; max-width: 400px; margin: 0 auto;">
 
-<div style="text-align: center; width: 110px;"><a href="https://github.com/nicolaiprodromov/dot_node/releases" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/git.png" alt="Get for Free on GitHub" width="70" style="display: block; margin: 0 auto 8px auto; filter: invert(1);"><div>Get for Free</div></a></div>
+<table>
+<tr>
+<td align="center" width="120">
+<a href="https://github.com/nicolaiprodromov/dot_node/releases">
+<img src="./docs/git.png" width="70" style="filter: invert(1);">
+<br>Get for Free
+</a>
+</td>
+<td align="center" width="120">
+<a href="https://superhivemarket.com">
+<img src="./docs/superhive.png" width="70">
+<br>Buy on Superhive
+</a>
+</td>
+<td align="center" width="120">
+<a href="https://blenderkit.com">
+<img src="./docs/blenderkit.png" width="70">
+<br>Buy on BlenderKit
+</a>
+</td>
+</tr>
+</table>
 
-<div style="text-align: center; width: 110px;"><a href="https://superhivemarket.com" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/superhive.png" alt="Buy on Superhive" width="70" style="display: block; margin: 0 auto 8px auto;"><div>Buy on Superhive</div></a></div>
-
-<div style="text-align: center; width: 110px;"><a href="https://blenderkit.com" style="text-decoration: none; color: #ff6600; display: block;"><img src="./docs/blenderkit.png" alt="Buy on BlenderKit" width="70" style="display: block; margin: 0 auto 8px auto;"><div>Buy on BlenderKit</div></a></div>
-
-</div>
 </div>
 
 ###

@@ -27,19 +27,19 @@ The current import system for nodes is broken, the append method is just another
 <tr>
 <td align="center" width="120">
 <a href="https://github.com/nicolaiprodromov/dot_node/releases">
-<img src="./docs/git.png" width="70" style="filter: invert(1);">
+<img src="./docs/logo_git.png" width="70" style="filter: invert(1);">
 <br>Get for Free
 </a>
 </td>
 <td align="center" width="120">
 <a href="https://superhivemarket.com">
-<img src="./docs/superhive.png" width="70">
+<img src="./docs/logo_superhive.png" width="70">
 <br>Buy on Superhive
 </a>
 </td>
 <td align="center" width="120">
 <a href="https://blenderkit.com">
-<img src="./docs/blenderkit.png" width="70">
+<img src="./docs/logo_blenderkit.png" width="70">
 <br>Buy on BlenderKit
 </a>
 </td>
@@ -70,7 +70,7 @@ The current import system for nodes is broken, the append method is just another
 
 <div align="center">
 
-![File Example](./docs/Capture.JPG)
+![File Example](./docs/Asset%201.JPG)
 
 </div>
 

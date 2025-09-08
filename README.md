@@ -81,6 +81,7 @@ The current import system for nodes is broken, the append method is just another
 - **EXPORT**:
     1. Select the node/nodes you want to export
     2. Right click > Export Node Groups
+    3. **Optional**: Include a preview image by checking "Include Preview" and selecting a `preview.png` file (max 250KB)
 
 ###
 
@@ -95,11 +96,12 @@ It's designed to become the **standard** for sharing and working collaboratively
 
 ### Under the hood
 
-A `.node` file is a lightweight, portable package for sharing procedural node group setups with all the data, connections, and metadata. Technically, it's a ZIP archive containing three essential components:
+A `.node` file is a lightweight, portable package for sharing procedural node group setups with all the data, connections, and metadata. Technically, it's a ZIP archive containing these essential components:
 
 - a `.json` metadata file with nodes structure and properties
 - a `.blend` file with the actual node group data
-- a `.config` file for package validation.
+- a `.config` file for package validation
+- **optional**: a `preview.png` image file (max 250KB) for visual preview of the node group
 
 This format enables seamless sharing and importing across different Blender projects (soon enough, different software too) without complex file dependencies or incompatibility issues.
 

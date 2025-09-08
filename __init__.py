@@ -5,6 +5,8 @@ def register():
     register_association.register()
     export_nodegroup.register()
     export_nodegroup.register_menu()
+    import_nodegroup.register()
+    import_nodegroup.register_menu()
     drop_handler.register()
     
     # Actually run the file association registration
@@ -21,6 +23,8 @@ def register():
 
 def unregister():
     drop_handler.unregister()
+    import_nodegroup.unregister_menu()
+    import_nodegroup.unregister()
     export_nodegroup.unregister_menu()
     export_nodegroup.unregister()
     register_association.unregister()

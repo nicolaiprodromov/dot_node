@@ -1,5 +1,7 @@
+<body style="margin: 0; padding: 0; box-sizing: border-box;">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6;color:#fff;background-color:#3b4055;margin:0;padding:20px;max-width:980px;margin:0 auto">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.6; color: #ffffff; background-color: #3b4055; margin: 0; padding: 20px; width: 100%; min-height: 100vh; box-sizing: border-box;">
+    <div style="max-width: 980px; margin: 0 auto;">
     <img src="https://raw.githubusercontent.com/nicolaiprodromov/dot_node/refs/heads/master/docs/Asset%2026.png" alt="Node Extension Preview" style="max-width:100%;height:auto;display:block;margin:0 auto">
     
     <div style="text-align:center;margin:20px 0">
@@ -189,11 +191,11 @@ format_version=1.0.0</code></pre>
         </tr>
     </table>
     
-    <h4>Blender Version Compatibility</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Blender Version Compatibility</h4>
     
-    <p>The serializer handles interface differences between Blender versions:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The serializer handles interface differences between Blender versions:</p>
     
-    <pre><code>// Blender 4.5+ Interface API
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">// Blender 4.5+ Interface API
 if hasattr(self.node_group, 'interface') and hasattr(self.node_group.interface, 'items_tree'):
     for item in self.node_group.interface.items_tree:
         if hasattr(item, 'item_type') and item.item_type == 'SOCKET':
@@ -204,22 +206,22 @@ elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
     for input_socket in self.node_group.inputs:
         // Process legacy interface structure</code></pre>
     
-    <h3>Advanced Property Handling</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Advanced Property Handling</h3>
     
-    <p>The serializer captures node-specific properties including:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The serializer captures node-specific properties including:</p>
     
-    <ul>
-        <li><strong>Mathematical Properties</strong>: <code>operation</code>, <code>blend_type</code>, <code>distribution</code>, <code>mode</code></li>
-        <li><strong>Data Properties</strong>: <code>data_type</code>, <code>domain</code>, <code>interpolation</code>, <code>resolution</code></li>
-        <li><strong>Control Properties</strong>: <code>use_clamp</code>, <code>clamp_factor</code>, <code>offset</code>, <code>scale</code></li>
-        <li><strong>Custom Properties</strong>: User-defined properties via <code>node.keys()</code></li>
+    <ul style="padding-left: 2em; margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Mathematical Properties</strong>: <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">operation</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">blend_type</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">distribution</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">mode</code></li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Data Properties</strong>: <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">data_type</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">domain</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">interpolation</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">resolution</code></li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Control Properties</strong>: <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">use_clamp</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">clamp_factor</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">offset</code>, <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">scale</code></li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Custom Properties</strong>: User-defined properties via <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">node.keys()</code></li>
     </ul>
     
-    <h4>Default Value Serialization</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Default Value Serialization</h4>
     
-    <p>Complex data types are handled with appropriate serialization:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">Complex data types are handled with appropriate serialization:</p>
     
-    <pre><code>def _serialize_socket_default_value(self, socket):
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">def _serialize_socket_default_value(self, socket):
     if not hasattr(socket, 'default_value'):
         return None
     
@@ -256,11 +258,11 @@ elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
         </ol>
     </div>
     
-    <h4>Multi-File Processing</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Multi-File Processing</h4>
     
-    <p>The unpacker supports batch processing of multiple <code>.node</code> files:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The unpacker supports batch processing of multiple <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">.node</code> files:</p>
     
-    <pre><code>def process_multiple_files(self, file_paths):
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">def process_multiple_files(self, file_paths):
     success_count = 0
     error_count = 0
     error_messages = []
@@ -275,27 +277,32 @@ elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
     
     return success_count, error_count, error_messages</code></pre>
     
-    <h3>Context-Aware Node Placement</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Context-Aware Node Placement</h3>
     
-    <p>The system intelligently places imported nodes based on context:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The system intelligently places imported nodes based on context:</p>
     
-    <table>
-        <tr>
-            <td><strong>Context</strong></td>
-            <td><strong>Placement Strategy</strong></td>
-            <td><strong>Behavior</strong></td>
+    <table style="border-spacing: 0; border-collapse: collapse; margin: 20px auto; background-color: #3a4450; width: 100%;">
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Context</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Placement Strategy</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Behavior</strong></td>
         </tr>
-        <tr>
-            <td>Single File Import</td>
-            <td>Cursor Position</td>
-            <td>Place at exact mouse coordinates</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Single File Import</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Cursor Position</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Place at exact mouse coordinates</td>
         </tr>
-        <tr>
-            <td>Multiple File Import</td>
-            <td>Default Location</td>
-            <td>Place at node editor origin</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Multiple File Import</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Default Location</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Place at node editor origin</td>
         </tr>
-        <tr>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Background Import</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Context-Sensitive</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Place based on active editor space</td>
+        </tr>
+    </table>
             <td>Background Import</td>
             <td>Scene Integration</td>
             <td>Add to library without placement</td>
@@ -304,15 +311,15 @@ elif hasattr(self.node_group, 'inputs') and hasattr(self.node_group, 'outputs'):
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">desktop_windows</span>Windows Integration</h2>
     
-    <h3>File Association System</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">File Association System</h3>
     
-    <p>The <code>FileAssociationManager</code> class handles Windows registry integration for seamless file handling:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">FileAssociationManager</code> class handles Windows registry integration for seamless file handling:</p>
     
-    <h4>Registry Structure</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Registry Structure</h4>
     
-    <p>The addon creates the following registry entries:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The addon creates the following registry entries:</p>
     
-    <pre><code>HKEY_CURRENT_USER\Software\Classes\.node
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">HKEY_CURRENT_USER\Software\Classes\.node
     └── (Default) = "NodeFile"
 
 HKEY_CURRENT_USER\Software\Classes\NodeFile
@@ -322,33 +329,33 @@ HKEY_CURRENT_USER\Software\Classes\NodeFile
     └── shell\open\command
         └── (Default) = "C:\Program Files\7-Zip\7zFM.exe \"%1\""</code></pre>
     
-    <h4>Archive Application Discovery</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Archive Application Discovery</h4>
     
-    <p>The system automatically detects suitable archive applications:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The system automatically detects suitable archive applications:</p>
     
-    <ol>
-        <li><strong>7-Zip Detection</strong> - Check standard installation paths and PATH environment</li>
-        <li><strong>Registry Lookup</strong> - Query both 32-bit and 64-bit registry entries</li>
-        <li><strong>WinRAR Fallback</strong> - Detect WinRAR installations if 7-Zip unavailable</li>
-        <li><strong>System Default</strong> - Use Windows "Open With" dialog as last resort</li>
+    <ol style="padding-left: 2em; margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">7-Zip Detection</strong> - Check standard installation paths and PATH environment</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Registry Lookup</strong> - Query both 32-bit and 64-bit registry entries</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">WinRAR Fallback</strong> - Detect WinRAR installations if 7-Zip unavailable</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">System Default</strong> - Use Windows "Open With" dialog as last resort</li>
     </ol>
     
-    <h3>Shell Integration Features</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Shell Integration Features</h3>
     
-    <ul>
-        <li><strong>Custom Icons</strong>: <code>.node</code> files display with custom XWZ icon</li>
-        <li><strong>Context Menu</strong>: Right-click integration for "Open with Archive Manager"</li>
-        <li><strong>Double-Click Handling</strong>: Direct access to file contents via archive viewer</li>
-        <li><strong>Shell Notifications</strong>: Automatic icon cache refresh and file association updates</li>
+    <ul style="padding-left: 2em; margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Custom Icons</strong>: <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">.node</code> files display with custom XWZ icon</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Context Menu</strong>: Right-click integration for "Open with Archive Manager"</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Double-Click Handling</strong>: Direct access to file contents via archive viewer</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Shell Notifications</strong>: Automatic icon cache refresh and file association updates</li>
     </ul>
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">drag_handle</span>Drag & Drop System</h2>
     
-    <h3>Drop Handler Implementation</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Drop Handler Implementation</h3>
     
-    <p>The drag & drop system uses Blender's <code>FileHandler</code> API for seamless integration:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The drag & drop system uses Blender's <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">FileHandler</code> API for seamless integration:</p>
     
-    <pre><code>class NODE_FH_drop_handler(bpy.types.FileHandler):
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">class NODE_FH_drop_handler(bpy.types.FileHandler):
     bl_idname = "NODE_FH_drop_handler"
     bl_label = "Node Drop Handler"
     bl_import_operator = "node.drop_handler"
@@ -358,19 +365,19 @@ HKEY_CURRENT_USER\Software\Classes\NodeFile
     def poll_drop(cls, context):
         return True  // Accept drops in any context</code></pre>
     
-    <h4>Mouse Coordinate Capture</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Mouse Coordinate Capture</h4>
     
-    <p>Precise cursor positioning for intelligent node placement:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">Precise cursor positioning for intelligent node placement:</p>
     
-    <pre><code>def invoke(self, context, event):
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">def invoke(self, context, event):
     self.mouse_x = event.mouse_region_x if hasattr(event, 'mouse_region_x') else 0
     self.mouse_y = event.mouse_region_y if hasattr(event, 'mouse_region_y') else 0
     
     // Pass coordinates to unpacker for placement</code></pre>
     
-    <h3>Multi-File Batch Processing</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Multi-File Batch Processing</h3>
     
-    <p>The handler efficiently processes multiple files dropped simultaneously:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The handler efficiently processes multiple files dropped simultaneously:</p>
     
     <div style="margin:20px 0">
         <h4 style="font-size:1.25em;margin:24px 0 16px;font-weight:600;line-height:1.25;color:#fff">Processing Pipeline</h4>
@@ -385,9 +392,9 @@ HKEY_CURRENT_USER\Software\Classes\NodeFile
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">tune</span>Configuration & Settings</h2>
     
-    <h3>Addon Manifest Configuration</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Addon Manifest Configuration</h3>
     
-    <pre><code>schema_version = "1.0.0"
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">schema_version = "1.0.0"
 id = "node_file_link"
 name = "Node File Link"
 tagline = "The base functionality for the .node extension"
@@ -398,78 +405,85 @@ website = "https://xwz.app"
 license = ["MIT"]
 blender_version_min = "4.1.0"</code></pre>
     
-    <h3>Package Creation System</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Package Creation System</h3>
     
-    <p>The <code>package.bat</code> script creates optimized <code>.node</code> files with integrity verification:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">The <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">package.bat</code> script creates optimized <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">.node</code> files with integrity verification:</p>
     
-    <h4>PowerShell Integration</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">PowerShell Integration</h4>
     
-    <p>Uses .NET compression APIs for cross-platform compatibility:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">Uses .NET compression APIs for cross-platform compatibility:</p>
     
-    <pre><code>Add-Type -AssemblyName System.IO.Compression.FileSystem
+    <pre style="padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #2e3244; border-radius: 6px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);"><code style="display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; color: #ffffff;">Add-Type -AssemblyName System.IO.Compression.FileSystem
 $zip = [System.IO.Compression.ZipFile]::Open('output.node', 'Create')
 
 // Add files with proper directory structure
 // Calculate SHA256 hash for integrity
 // Create .config file with validation data</code></pre>
+// Create .config file with validation data</code></pre>
     
-    <h4>Hash Calculation Algorithm</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Hash Calculation Algorithm</h4>
     
-    <ol>
-        <li>Calculate SHA256 hash for each file in package</li>
-        <li>Sort hashes alphabetically for consistency</li>
-        <li>Combine all hashes with pipe separator</li>
-        <li>Calculate final SHA256 hash of combined string</li>
-        <li>Store in <code>.config</code> file for validation</li>
+    <ol style="padding-left: 2em; margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);">Calculate SHA256 hash for each file in package</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);">Sort hashes alphabetically for consistency</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);">Combine all hashes with pipe separator</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);">Calculate final SHA256 hash of combined string</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);">Store in <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">.config</code> file for validation</li>
     </ol>
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">api</span>API Reference</h2>
     
-    <h3>Core Classes</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Core Classes</h3>
     
-    <h4>NodeGroupSerializer</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">NodeGroupSerializer</h4>
     
-    <table>
-        <tr>
-            <td><strong>Method</strong></td>
-            <td><strong>Parameters</strong></td>
-            <td><strong>Returns</strong></td>
+    <table style="border-spacing: 0; border-collapse: collapse; margin: 20px auto; background-color: #3a4450; width: 100%;">
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Method</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Parameters</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Returns</strong></td>
         </tr>
-        <tr>
-            <td><code>serialize_nodegroup()</code></td>
-            <td><code>node_tree, output_directory, package_name</code></td>
-            <td><code>bool</code> (success status)</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">serialize_nodegroup()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">node_tree, output_directory, package_name</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">bool</code> (success status)</td>
         </tr>
-        <tr>
-            <td><code>_create_metadata_json()</code></td>
-            <td>None</td>
-            <td><code>bool</code> (creation success)</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">_create_metadata_json()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">None</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">bool</code> (creation success)</td>
         </tr>
-        <tr>
-            <td><code>_create_blend_file()</code></td>
-            <td>None</td>
-            <td><code>bool</code> (export success)</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">_create_blend_file()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">None</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">bool</code> (export success)</td>
         </tr>
     </table>
     
-    <h4>NodeGroupUnpacker</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">NodeGroupUnpacker</h4>
     
-    <table>
-        <tr>
-            <td><strong>Method</strong></td>
-            <td><strong>Parameters</strong></td>
-            <td><strong>Returns</strong></td>
+    <table style="border-spacing: 0; border-collapse: collapse; margin: 20px auto; background-color: #3a4450; width: 100%;">
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Method</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Parameters</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Returns</strong></td>
         </tr>
-        <tr>
-            <td><code>unpack_node_file()</code></td>
-            <td><code>filepath: str</code></td>
-            <td><code>Tuple[bool, str]</code> (success, message)</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">unpack_node_file()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">filepath: str</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">Tuple[bool, str]</code> (success, message)</td>
         </tr>
-        <tr>
-            <td><code>process_multiple_files()</code></td>
-            <td><code>file_paths: List[str]</code></td>
-            <td><code>Tuple[int, int, List[str]]</code> (success_count, error_count, errors)</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">process_multiple_files()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">file_paths: List[str]</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">Tuple[int, int, List[str]]</code> (success_count, error_count, errors)</td>
         </tr>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">_validate_package()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">package_path: str</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">bool</code> (validation success)</td>
+        </tr>
+    </table>
         <tr>
             <td><code>set_mouse_coordinates()</code></td>
             <td><code>x: int, y: int</code></td>
@@ -477,91 +491,91 @@ $zip = [System.IO.Compression.ZipFile]::Open('output.node', 'Create')
         </tr>
     </table>
     
-    <h4>FileAssociationManager</h4>
+    <h4 style="font-size: 1.25em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">FileAssociationManager</h4>
     
-    <table>
-        <tr>
-            <td><strong>Method</strong></td>
-            <td><strong>Parameters</strong></td>
-            <td><strong>Returns</strong></td>
+    <table style="border-spacing: 0; border-collapse: collapse; margin: 20px auto; background-color: #3a4450; width: 100%;">
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Method</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Parameters</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Returns</strong></td>
         </tr>
-        <tr>
-            <td><code>perform_file_association()</code></td>
-            <td>None</td>
-            <td><code>bool</code> (registration success)</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">perform_file_association()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">None</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">bool</code> (registration success)</td>
         </tr>
-        <tr>
-            <td><code>find_archive_application()</code></td>
-            <td>None</td>
-            <td><code>str</code> (application path)</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">find_archive_application()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">None</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">str</code> (application path)</td>
         </tr>
-        <tr>
-            <td><code>check_existing_association()</code></td>
-            <td>None</td>
-            <td><code>str | None</code> (existing ProgID)</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">check_existing_association()</code></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">None</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">str | None</code> (existing ProgID)</td>
         </tr>
     </table>
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">code</span>Development Guidelines</h2>
     
-    <h3>Extending the System</h3>
+    <h3 style="font-size: 1.5em; margin: 24px 0 16px; font-weight: 600; line-height: 1.25; color: #ffffff;">Extending the System</h3>
     
-    <p>For developers looking to extend or modify the addon:</p>
+    <p style="margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">For developers looking to extend or modify the addon:</p>
     
-    <ul>
-        <li><strong>Custom Serializers</strong>: Inherit from <code>NodeGroupSerializer</code> for specialized node types</li>
-        <li><strong>Additional File Formats</strong>: Implement new packers/unpackers following the established pattern</li>
-        <li><strong>Platform Support</strong>: Add file association managers for macOS and Linux</li>
-        <li><strong>UI Extensions</strong>: Integrate additional operators into Blender's interface</li>
+    <ul style="padding-left: 2em; margin: 0 0 16px; color: rgba(255, 255, 255, 0.7);">
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Custom Serializers</strong>: Inherit from <code style="padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: #2e3244; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; border: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">NodeGroupSerializer</code> for specialized node types</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Additional File Formats</strong>: Implement new packers/unpackers following the established pattern</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Platform Support</strong>: Add file association managers for macOS and Linux</li>
+        <li style="margin-bottom: 4px; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">UI Extensions</strong>: Integrate additional operators into Blender's interface</li>
     </ul>
     
     <h2 style="font-size:1.5em;margin:24px 0 16px;font-weight:600;line-height:1.25;border-bottom:1px solid #2e3244;padding-bottom:0.3em;color:#fff"><span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:28px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle;margin-right:8px">analytics</span>Technical Specifications</h2>
     
-    <table>
-        <tr>
-            <td><strong>Specification</strong></td>
-            <td><strong>Value</strong></td>
-            <td><strong>Notes</strong></td>
+    <table style="border-spacing: 0; border-collapse: collapse; margin: 20px auto; background-color: #3a4450; width: 100%;">
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Specification</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Value</strong></td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);"><strong style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Notes</strong></td>
         </tr>
-        <tr>
-            <td>File Format Version</td>
-            <td>1.0.0</td>
-            <td>Current format specification</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">File Format Version</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">1.0.0</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Current format specification</td>
         </tr>
-        <tr>
-            <td>Supported Node Types</td>
-            <td>GeometryNodeTree</td>
-            <td>Primary focus on Geometry Nodes</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Supported Node Types</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">GeometryNodeTree</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Primary focus on Geometry Nodes</td>
         </tr>
-        <tr>
-            <td>Blender Compatibility</td>
-            <td>4.1.0+</td>
-            <td>Modern extension system required</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Blender Compatibility</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">4.1.0+</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Modern extension system required</td>
         </tr>
-        <tr>
-            <td>Platform Support</td>
-            <td>Windows</td>
-            <td>macOS and Linux support planned</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Platform Support</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Windows</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">macOS and Linux support planned</td>
         </tr>
-        <tr>
-            <td>Maximum File Size</td>
-            <td>Unlimited</td>
-            <td>Limited by available system memory</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Maximum File Size</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Unlimited</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Limited by available system memory</td>
         </tr>
-        <tr>
-            <td>Compression</td>
-            <td>ZIP (deflate)</td>
-            <td>Standard compression for portability</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Compression</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">ZIP (deflate)</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Standard compression for portability</td>
         </tr>
-        <tr>
-            <td>Hash Algorithm</td>
-            <td>SHA256</td>
-            <td>Cryptographic integrity verification</td>
+        <tr style="background-color: #252938; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Hash Algorithm</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">SHA256</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Cryptographic integrity verification</td>
         </tr>
-        <tr>
-            <td>Character Encoding</td>
-            <td>UTF-8</td>
-            <td>Universal text encoding support</td>
+        <tr style="background-color: #2e3244; border-top: 1px solid #3b4055; color: rgba(255, 255, 255, 0.7);">
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Character Encoding</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">UTF-8</td>
+            <td style="padding: 8px 16px; border: 1px solid #4a5568; vertical-align: top; color: rgba(255, 255, 255, 0.7);">Universal text encoding support</td>
         </tr>
     </table>
     
@@ -570,4 +584,6 @@ $zip = [System.IO.Compression.ZipFile]::Open('output.node', 'Create')
     <ul style="padding-left:2em;margin:0 0 16px;color:rgba(255,255,255,0.7)">
         <li style="margin-bottom:4px;color:rgba(255,255,255,0.7)"><strong style="font-weight:600;color:rgba(255,255,255,0.7)">Version 1.0.0 (September 2025)</strong>: Initial release with core functionality</li>
     </ul>
+    </div>
 </div>
+</body>
